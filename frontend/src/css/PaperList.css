@@ -1,0 +1,23 @@
+/* Secondary Color */
+:root {
+    --secondary-color: #FFC107; /* Yellow */
+    --accent-color-4: #9C27B0; /* Purple */
+  }
+  
+  .paper-card {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .paper-card .card-title {
+    color: var(--accent-color-4);
+  }
+  
+  /* Additional styles for the PaperList component */
+  .paper-card .card-text {
+    color: #333333;
+  }
+  
+  .paper-card .text-muted {
+    color: #666666;
+  }
