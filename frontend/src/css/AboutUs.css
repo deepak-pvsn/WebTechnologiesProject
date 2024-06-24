@@ -1,0 +1,21 @@
+.about-us {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.team-member {
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 600px;
+    background-color: #f8f9fa;
+}
+
+.team-member h4 {
+    color: #007bff;
+}
+
+.team-member p {
+    margin: 0.5rem 0;
+}
