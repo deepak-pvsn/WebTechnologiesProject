@@ -50,6 +50,15 @@ a {
   color: var(--accent-color-2);
 }
 
+/* App.css */
+.selected-paper-details {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
 footer {
   background-color: var(--primary-color);
   color: white;

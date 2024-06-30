@@ -1,46 +1,147 @@
 const PaperData = [
-    {
+  {
       id: 1,
       title: 'A Survey on DNS Encryption: Current Development, Malware Misuse, and Inference Techniques',
       authors: 'Minzhao Lyu, Hassan Habibi Gharakheili, and Vijay Sivaraman',
-      // abstract: 'The paper surveys the current landscape of DNS encryption technologies, examining their development, deployment, and implications for security and privacy.It addresses the challenges and risks posed by the misuse of DNS encryption by malware and reviews techniques for analyzing encrypted DNS traffic to infer malicious activities',
+      url:'https://dl.acm.org/doi/10.1145/3547331',
       problemDefinition: ['DoH_MD'],
       solutions: ['ML_BD'],
-      methodology: ['System_Imp']
-    },
+      methodology: ['System_Imp'],
+      problemContent: `The paper identifies the core problem of unencrypted DNS traffic, which exposes users to privacy breaches and security threats due to the plaintext nature of traditional DNS queries and responses. 
+      This lack of encryption makes DNS communications vulnerable to interception and manipulation. 
+      Additionally, the paper highlights the issue of malware leveraging DNS encryption to obfuscate its activities, thereby evading traditional security measures that depend on inspecting plaintext traffic. 
+      The challenge lies in detecting and analyzing encrypted DNS traffic to identify and mitigate these malicious activities without compromising user privacy.`,
+      solutionContent: `The paper reviews the deployment of standardized DNS encryption protocols such as DNS-overTLS (DoT), DNS-over-HTTPS (DoH), and DNS-over-QUIC (DoQ), which aim to secure DNS
+      communications and protect user privacy by encrypting DNS queries and responses. To
+      counteract the misuse of these encryption methods by malware, the paper suggests adopting
+      advanced detection techniques, including traffic profiling, statistical analysis, and machine
+      learning, to identify anomalous patterns in encrypted DNS traffic. These solutions aim to
+      enhance the security and performance of DNS encryption while ensuring robust detection of
+      malicious activities`,
+      methodologyContent:`The paper employs a systematic literature review methodology, analyzing peer-reviewed papers,
+      technical reports, and standards documents from 2016 to 2021. It categorizes the literature based
+      on topics like DNS encryption standards, performance, practical deployment issues, and security
+      vulnerabilities. The authors critically assess the current state of DNS encryption, including the
+      challenges posed by malware misuse and the methods available for inferring information from
+      encrypted DNS traffic. The paper concludes with a discussion of future research directions,
+      emphasizing the need for improved detection techniques and more resilient DNS encryption
+      mechanisms`
+  },
+
     {
       id: 2,
       title: ' A Comprehensive Study of DNS-over-HTTPS Downgrade Attack',
       authors: 'Qing Huang',
-      // abstract: 'The thesis by Qing Huang delves into the DNS-over-HTTPS (DoH) downgrade attack, focusing on its deployment, security implications, and impact on the Internet ecosystem. The study evaluates the feasibility and success rates of downgrade attacks on mainstream browsers, highlighting vulnerabilities in default settings and the lack of user notification when DoH is compromised.The research also explores potential countermeasures at both implementation and protocol levels to mitigate the risks associated with DoH downgrade attacks.',
+      url:'https://www.usenix.org/system/files/foci20-paper-huang.pdf',
       problemDefinition: ['DoH_MD'],
       solutions: ['ML_BD'],
-      methodology:['Th_Analysis']
+      methodology:['Th_Analysis'],
+      problemContent:`The primary problem addressed in the thesis is the vulnerability of
+mainstream browsers to DNS-over-HTTPS downgrade attacks. By analyzing the adoption
+process of DoH in browsers and IETF documentations, the study identifies various attack vectors
+and emphasizes the ease with which attackers can compromise user queries without detection.
+The lack of user awareness and notification when DoH is unavailable poses a significant security
+risk to Internet users.`,
+      solutionContent:`To address the identified vulnerabilities, the thesis proposes
+countermeasures at both the implementation and protocol levels. By revising DoH
+implementations and protocols, it aims to enhance the security of DNS-over-HTTPS and mitigate
+the risks associated with downgrade attacks. These solutions are designed to improve the
+resilience of mainstream browsers against potential threats and safeguard user privacy and data
+integrity in the face of evolving cyber threats.`,
+      methodologyContent:`The methodology employed in the thesis includes a comprehensive
+analysis of the resolution and communication process of DNS-over-HTTPS, the design of an
+adversary model, and the development of downgrade attack methods targeting different phases of
+DoH. Through experimental setups and tool flows, the study evaluates the response patterns of
+browsers facing downgrade attacks in a realistic lab environment. By systematically categorizing
+and evaluating the attacks, the research provides insights into the feasibility and effectiveness of
+downgrade attacks on mainstream browsers across various operating systems.`
     },
     {
       id: 3,
       title: 'Measuring DNS-over-HTTPS Performance Around the World',
       authors: 'Rishabh Chhabra, Philip Winter, Steven Englehardt, and Nick Feamster',
-      // abstract: 'The paper by Chhabra et al. explores the global performance impact of DNS-over-HTTPS (DoH), a protocol designed to enhance DNS privacy by encrypting queries.Through an extensive measurement campaign involving over 22,000 clients from 224 countries, the authors compare DoH\'s performance with traditional DNS (Do53). They analyze performance variability across different regions and providers, develop models to explain these differences, and propose guidelines for optimizing DoH deployment worldwide.',
+      url: 'https://dl.acm.org/doi/pdf/10.1145/3487552.3487849',
       problemDefinition: ['ML_AI'],
       solutions: ['Theoretical'],
-      methodology: ['Th_Analysis']
+      methodology: ['Th_Analysis'],
+      problemContent:`The primary problem addressed in the paper is the performance impact of adopting DNS-overHTTPS (DoH) compared to traditional DNS (Do53) from a global perspective. While DoH
+improves privacy by encrypting DNS queries, it may introduce latency and slowdowns,
+potentially varying significantly across different regions due to disparities in internet
+infrastructure and economic conditions. The study aims to measure and understand these
+performance variations, highlighting the feasibility and challenges of DoH adoption worldwide.`,
+      solutionContent:`To address the problem, the authors propose a large-scale measurement campaign using the
+BrightData proxy network to gather performance data from a diverse range of global locations.
+They focus on comparing DoH and Do53 by analyzing key metrics such as query latency and
+resolution time. The study also includes an evaluation of the performance of different DoH
+providers, aiming to identify the best options for various regions. Additionally, the authors
+suggest creating explanatory models to understand the factors contributing to performance
+differences and offer recommendations for the effective global deployment of DoH.`,
+      methodologyContent:`The methodology employed involves conducting a comprehensive measurement study using the
+BrightData proxy network, which includes data collection from over 22,000 clients across 224
+countries. The authors perform a comparative analysis of DoH and Do53, focusing on
+performance metrics like latency and resolution time. They utilize empirical and statistical
+methods to analyze the data and develop explanatory models that account for performance
+variations across different regions. These models consider factors such as internet infrastructure
+quality and economic conditions. Finally, the study concludes with data-driven recommendations
+for optimizing DoH deployment globally, aiming to mitigate performance issues and ensure
+equitable access.`
     },
     {
       id: 4,
       title: 'Exploring Simple Detection Techniques for DNS-over-HTTPS Tunnels',
       authors: 'Carmen Kwan, Paul Janiszewski, Shela Qiu, Cathy Wang, and Cecylia Bocovich',
+      url: 'https://dl.acm.org/doi/pdf/10.1145/3473604.3474563',
       problemDefinition: ['DoH_MD'],
       solutions: ['ML_BD'],
-      methodology: ['System_Imp']
+      methodology: ['System_Imp'],
+      problemContent:`The paper addresses the challenge of detecting DNS-over-HTTPS (DoH)
+tunnels used for censorship circumvention. These tunnels obscure DNS queries within HTTPS
+traffic, evading traditional detection methods and enabling users to bypass censorship controls.`,
+      solutionContent:`To tackle this problem, the authors propose threshold-based attacks based
+on traffic characteristics such as average payload length, packet rate, and throughput. These
+attacks aim to distinguish between normal DoH traffic and DoH tunneling traffic effectively
+while minimizing collateral damage in a censoring environment. Additionally, traffic shaping
+techniques are explored to modify the dnstt tool's traffic patterns, making it more difficult to
+detect.`,
+      methodologyContent:`The study employs a measurement study approach using real-world
+datasets and experiments. It begins with an analysis of traffic characteristics in normal DoH
+traffic to establish baseline thresholds for detection. Threshold-based attacks are then developed
+and tested against datasets containing both circumventor (dnstt) and non-circumventor (DoH)
+traffic to evaluate their accuracy, recall, precision, and collateral damage. Furthermore, the dnstt
+tool is modified to shape its traffic to resemble non-circumventor traffic patterns, and the impact
+of these modifications on dnstt's performance metrics such as throughput and page load time is
+assessed. This empirical approach provides insights into the effectiveness and limitations of
+detecting DoH tunnels and defending against detection through traffic shaping strategies.`
     },
     {
       id: 5,
       title: 'Detecting Malicious Use of DNS over HTTPS Tunnels Using Statistical Traffic Analysis',
       authors: 'Marta Moure-Garrido, Celeste Campo, Carlos Garcia-Rubio',
+      url: 'https://dl.acm.org/doi/10.1145/3551663.3558605',
       problemDefinition: ['ML_AI'],
       solutions: ['Theoretical'],
-      methodology: ['Th_Analysis']
+      methodology: ['Th_Analysis'],
+      problemContent:`The primary challenge addressed is the identification and differentiation of
+benign DoH traffic from malicious DoH traffic. Malicious actors can exploit DoH to hide their
+activities, making it difficult to detect anomalous behaviors or patterns that indicate malicious
+intent. Traditional methods of traffic analysis and detection are often inadequate due to the
+encrypted nature of DoH traffic, necessitating new approaches that leverage statistical analysis
+and machine learning techniques.`,
+      solutionContent:`The paper proposes a solution based on statistical traffic analysis combined
+with machine learning classifiers. It suggests extracting and analyzing specific statistical features
+from DoH traffic, such as connection duration, packet size distributions, and time intervals
+between packets. These features are utilized to train machine learning models to distinguish
+between benign and malicious traffic. The focus is on selecting the most discriminative features
+to achieve high detection accuracy while minimizing false positives and false negatives.`,
+      methodologyContent:`The methodology involves several key steps: first, collecting and
+preprocessing a dataset containing both benign and malicious DoH traffic. Statistical parameters
+are then extracted from the traffic data, focusing on features that are likely to differentiate
+between benign and malicious behaviors. Machine learning classifiers, including Random Forest
+(RF), Decision Tree (DT), and K-Nearest Neighbors (KNN), are applied to the dataset to build
+and evaluate detection models. The performance metrics such as accuracy, precision, recall, and
+F1-score are used to assess the effectiveness of each model in accurately classifying traffic. The
+study emphasizes empirical evaluation using real-world or realistic simulation data to validate
+the proposed approach's efficacy in practical scenarios.`
     },
     {
       id: 6,
