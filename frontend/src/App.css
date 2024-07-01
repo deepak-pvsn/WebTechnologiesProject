@@ -12,10 +12,14 @@
 body {
   background-color: var(--background-color);
   padding-top: 0px; /* Space for the fixed navbar */
+  height: 100%;
 }
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Navbar styling */
@@ -99,13 +103,32 @@ section {
 footer {
   background-color: var(--primary-color);
   color: white;
+  flex-shrink: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+.text-justify-right {
+  text-align: justify;
+  text-align-last: left;
 }
 
 #home h1{
   font-weight: bold;
   color: rgb(147, 78, 78);
 }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
+
