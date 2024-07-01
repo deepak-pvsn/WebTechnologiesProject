@@ -461,7 +461,38 @@ the proposed approach's efficacy in practical scenarios.`
     authors: 'Mohammad Amir Salari, B.Sc.',
     problemDefinition: ['ML_AI'],
     solutions: ['Theoretical'],
-    methodology: ['System_Imp', 'Th_Analysis']
+    methodology: ['System_Imp', 'Th_Analysis'],
+    url: 'https://www.proquest.com/openview/973656a2de922a09225d080fad4d1168/1?pq-origsite=gscholar&cbl=18750&diss=y',
+    problemContent: `The paper addresses the issue of website fingerprinting attacks on the Oblivious DNS over HTTPS 
+(ODoH) protocol. Encrypted DNS protocols like ODoH are designed to enhance user privacy by 
+preventing the interception and modification of DNS queries. However, the research highlights that 
+even these encrypted protocols are vulnerable to website fingerprinting attacks. These attacks can 
+identify which website a user is visiting by analyzing patterns in network traffic, such as packet size 
+and timing, despite the encryption of the actual content`,
+    solutionContent: `The paper proposes using machine learning models to conduct website fingerprinting on ODoH 
+traffic. By collecting and analyzing ODoH traffic data, the research aims to demonstrate that it is 
+possible to achieve high accuracy in identifying websites even with encrypted DNS. The key 
+contributions include:
+1. Developing a comprehensive dataset of ODoH traffic from various locations.
+2. Demonstrating the feasibility of website fingerprinting attacks on ODoH with machine 
+learning models.
+3. Evaluating the impact of different factors such as location, resolver, and time stability on 
+the effectiveness of these attacks`,
+    methodologyContent: `The methodology involves several steps:
+1. Data Collection: The researchers identified the 100 most visited websites and collected 
+ODoH traffic for these sites from various locations to ensure spatiotemporal diversity. This data 
+collection was performed in a controlled environment to build a robust dataset.
+2. Feature Extraction: Different features were extracted from the ODoH traffic data, focusing 
+on metadata such as packet sizes and timings, which are critical for website fingerprinting.
+3. Machine Learning Models: Various machine learning models were trained using the 
+extracted features to perform website fingerprinting. The models' performance was evaluated in 
+both open-world (where new, unseen websites are introduced) and closed-world (limited to known 
+websites) scenarios.
+4. Performance Evaluation: The study measured the accuracy and F1-scores of the models. It 
+also analyzed the effects of factors like location changes, different DNS resolvers, and temporal 
+stability on the model's performance. The experiments demonstrated that website fingerprinting 
+attacks on ODoH could achieve high accuracy, with one model reaching 91% accuracy and a 
+weighted-average F1-score of 90%`
   },
   {
     id: 47,
@@ -469,7 +500,33 @@ the proposed approach's efficacy in practical scenarios.`
     authors: 'Thilini Dahanayaka, Zhiyi Wang, Guillaume Jourjon, Suranga Seneviratne',
     problemDefinition: ['ML_AI'],
     solutions: ['Theoretical'],
-    methodology: ['System_Imp', 'Th_Analysis']
+    methodology: ['System_Imp', 'Th_Analysis'],
+    url: 'https://ieeexplore.ieee.org/abstract/document/9843593',
+    problemContent: `The paper addresses the vulnerability of DNS over HTTPS (DoH) traffic to traffic analysis attacks, 
+despite the use of encryption. Previous research demonstrated such attacks under strong 
+assumptions like closed-set classification or post-event analysis. This work aims to show traffic 
+analysis attacks on DoH without these strong assumptions, focusing on more realistic inline 
+attacks and open-set classification scenarios.`,
+    solutionContent: `1. An inline traffic analysis attack using variable length LSTM models that can achieve high 
+accuracy with as few as 10 packets.
+2. A novel open-set classification method based on the Jaccard Similarity Index (JSI) of top-n 
+predictions, which can identify target websites among background traffic without requiring openset samples during training.
+3. Analysis of the impact of user behavior (like DNS caching) on attack accuracy.
+4. Evaluation of padding as a defense mechanism against these attacks.`,
+    methodologyContent: `The methodology primarily involves system implementation and measurement studies:
+1. Data Collection: The authors collected DoH traffic data from the top 201 websites in Alexa's list 
+over 11 weeks, creating datasets for closed-set and open-set scenarios. They also created a user 
+behavior emulation dataset to study the effects of caching.
+2. Model Implementation: They implemented a variable length LSTM model for inline traffic 
+analysis. For open-set classification, they compared their proposed JSI method with existing 
+methods like Background Class and OpenMax.
+3. Experiments: The authors conducted various experiments including temporal analysis, concept 
+drift analysis, and defense analysis. They used different subsets of their collected data to train and 
+test their models under various scenarios.
+4. Performance Evaluation: The effectiveness of the attacks was evaluated using metrics such as 
+accuracy, F-score, and confusion analysis. They also analyzed the impact of different input lengths 
+on the attack performance.
+`
   },
   {
     id: 48,
@@ -477,7 +534,31 @@ the proposed approach's efficacy in practical scenarios.`
     authors: 'Rafa Alenezi and Simone A. Ludwig',
     problemDefinition: ['DoH_MD'],
     solutions: ['ML_BD'],
-    methodology: ['System_Imp']
+    methodology: ['System_Imp'],
+    url: 'https://ieeexplore.ieee.org/abstract/document/9660136',
+    problemContent: `The paper addresses the issue of detecting and classifying DNS tunneling tools used for malicious 
+DNS over HTTPS (DoH) traffic. As DoH has introduced new privacy challenges and can be exploited 
+by attackers to bypass security measures, there is a need to identify the specific DNS tunneling 
+tools being used to generate malicious DoH traffic`,
+    solutionContent: `The authors propose using various machine learning models to classify and predict the DNS 
+tunneling tools (dns2tcp, DNSCat2, and Iodine) utilized for generating malicious DoH traffic. They 
+investigate eight different machine learning algorithms to determine which ones perform best at 
+this classification task`,
+    methodologyContent: `The methodology involves applying and comparing eight machine learning models:
+1. Recurrent Neural Network (RNN)
+2. Long Short-Term Memory (LSTM) 
+3. Gated Recurrent Unit (GRU)
+4. Random Forest Classifier (RFC)
+5. Decision Tree Classifier (DTC) 
+6. Gradient Boosting Classifier (GBC)
+7. K-Neighbors Classifier (KNC)
+8. XGBoost Classifier (XGBC)
+The authors use the CIRA-CIC-DoHBrw-2020 dataset containing samples of malicious DoH traffic 
+generated by different DNS tunneling tools. They apply the machine learning models to this data to 
+classify the traffic into the correct DNS tunneling tool categories. The performance of the models is 
+evaluated using metrics such as precision, recall, F1-score, accuracy, mean absolute error, mean 
+squared error, and confusion matrices. The methodology involves training and testing the models 
+using 10-fold cross-validation to obtain robust results.`
   },
   {
     id: 49,
@@ -485,7 +566,45 @@ the proposed approach's efficacy in practical scenarios.`
     authors: 'Karel Hynek, Tomas Cejka, Dmitrii Vekshin',
     problemDefinition: ['ML_AI'],
     solutions: ['Theoretical'],
-    methodology: ['System_Imp', 'Th_Analysis']
+    methodology: ['System_Imp', 'Th_Analysis'],
+    url: 'https://pesw.fit.cvut.cz/2020/PESW_2020.pdf#page=19',
+    problemContent: `The paper "DoH detection: Discovering hidden DNS" by Karel Hynek, Tomas Cejka, and Dmitrii 
+Vekshin addresses the issue of detecting DNS over HTTPS (DoH) traffic. The primary problem is that 
+while DoH aims to enhance user privacy by encrypting DNS queries, it also obscures network 
+visibility. This can hinder network security measures that rely on DNS traffic for identifying 
+malicious activities, such as malware communication and data exfiltration. Existing detection 
+methods that block known DoH resolver IP addresses are inadequate because users or malicious 
+actors can use private or less-known DoH resolvers, bypassing these controls`,
+    solutionContent: `The authors propose a solution based on machine learning to detect DoH traffic using statistical 
+features derived from IP flow data. The key steps include:
+1. Developing a large dataset of DoH traffic from popular browsers (Firefox and Chrome) by 
+simulating browsing activities.
+2. Extracting relevant features from this traffic data to differentiate DoH from regular HTTPS 
+traffic.
+3. Using machine learning algorithms, specifically an AdaBoosted decision tree, to classify 
+and detect DoH traffic with high accuracy.`,
+    methodologyContent: `The methodology includes several key components:
+1. Data Collection: Traffic data was collected from autonomous browsing sessions of 
+websites from Alexa's top 10,000 list using DoH-enabled browsers (Firefox and Chrome). This setup 
+aimed to simulate realistic DoH traffic patterns.
+2. Feature Extraction: The researchers identified 18 features from the collected traffic data 
+that could distinguish DoH traffic. These features included the duration of the connection, packet 
+sizes, and burstiness of traffic. For example, DoH connections tend to have longer durations and 
+more consistent packet sizes due to the encapsulation of DNS queries within HTTPS packets.
+3. Machine Learning Models: Various machine learning algorithms were tested, including 5-
+NN and C4.5 decision tree. The AdaBoosted decision tree was found to be the most effective, 
+achieving an accuracy of 99.6% and a class recall of 95.5% for DoH traffic.
+4. System Implementation: The practical implementation required enhancing an IP flow 
+exporter (ipfixprobe) to capture additional packet information within HTTPS connections. The flow 
+data was then processed and analyzed using the NEMEA system, an open-source framework for 
+network traffic analysis. Experimental validation was conducted using Jupyter notebooks in Python, 
+with potential for deployment as a NEMEA module for real-time detection.
+5. Performance Evaluation: The performance of the machine learning classifier was evaluated 
+using a 5-fold cross-validation technique. The results were presented in a confusion matrix, 
+demonstrating high accuracy and reliability of the proposed detection method.
+This comprehensive approach combines data collection, feature extraction, machine learning, and 
+practical implementation to address the challenge of detecting DoH traffic, ensuring both privacy 
+and security in network environments.`
   },
   {
     id: 50,
@@ -493,7 +612,31 @@ the proposed approach's efficacy in practical scenarios.`
     authors: 'Austin Hounsel, Kevin Borgolte, Paul Schmitt, Jordan Holland, Nick Feamster',
     problemDefinition: ['DoH_MD'],
     solutions: ['ML_BD'],
-    methodology: ['System_Imp']
+    methodology: ['System_Imp'],
+    url: 'https://dl.acm.org/doi/abs/10.1145/3366423.3380139',
+    problemContent: `The paper addresses the performance implications of using encrypted DNS protocols (DNS-overTLS and DNS-over-HTTPS) compared to traditional unencrypted DNS. While encrypted DNS 
+provides privacy benefits, its impact on query response times and overall web page load times was 
+not well understood, especially under different network conditions`,
+    solutionContent: `The authors propose several optimizations to improve DNS performance:
+1. Opportunistic partial responses: Allowing clients to send multiple questions in a single query and 
+servers to respond with partial answers as they become available.
+2. Wire format caching: Caching the DNS response wire format to improve tail response times.
+3. Dropping support for EDNS Client-Subnet at public recursors to potentially improve page load 
+times.`,
+    methodologyContent: `The study employs a measurement-based approach:
+1. System Implementation: The authors developed custom tools using getdns and libcurl libraries 
+to measure precise DNS query response times for Do53, DoT, and DoH.
+2. Measurement Study: They conducted extensive measurements from five global vantage points 
+using Amazon EC2 instances. Measurements included DNS query response times and web page 
+load times for the top 1,000 websites and websites ranked 99,000-100,000.
+3. Emulation: The researchers emulated various network conditions, including 4G, lossy 4G, and 3G 
+networks, to understand how different DNS protocols perform under varying network quality.
+4. Real Prototype: The study used Mozilla Firefox 67.0.1 in headless mode, controlled by Selenium, 
+to measure actual page load times. This setup allowed for realistic measurements of user 
+experience with different DNS protocols.
+The methodology combines elements of system implementation, large-scale measurement 
+studies, network emulation, and real-world prototyping to provide a comprehensive analysis of 
+DNS protocol performance across various scenarios and network conditions`
   },
     
   ];
