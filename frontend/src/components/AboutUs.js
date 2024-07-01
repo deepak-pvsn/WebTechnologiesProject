@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../css/AboutUs.css';
 
 const AboutUs = () => {
+    // Scroll to top when About Us component is rendered
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="about-us">
-            <h1 className="text-center mb-4">About Us</h1>
+            <h1 className="text-center mb-4" id="about-us-title">About Us</h1>
             <h2 className="text-center mb-4">Group 6</h2>
             <h3 className="text-center mb-4">Topic: "A Survey on DNS over HTTPS"</h3>
             <div className="team-member">

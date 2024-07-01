@@ -1,23 +1,46 @@
-/* Secondary Color */
+/* PaperList.css */
+
+/* Primary Color */
 :root {
-    --secondary-color: #FFC107; /* Yellow */
-    --accent-color-4: #9C27B0; /* Purple */
-  }
-  
-  .paper-card {
-    background-color: var(--secondary-color);
-    color: white;
-  }
-  
-  .paper-card .card-title {
-    color: var(--accent-color-4);
-  }
-  
-  /* Additional styles for the PaperList component */
-  .paper-card .card-text {
-    color: #333333;
-  }
-  
-  .paper-card .text-muted {
-    color: #666666;
-  }
+  --primary-color: hsl(129, 53%, 62%);
+  /* Blue */
+  --secondary-color: hwb(25 36% 12%);
+  /* Yellow */
+  --accent-color-4: #f3ebf4;
+  /* Purple */
+}
+
+.paper-list {
+  padding: 20px;
+}
+
+.paper-card {
+  background-color: var(--secondary-color);
+  color: white;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  /* Set cursor to pointer for better usability */
+}
+
+.paper-card:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.02);
+  /* Scale up slightly on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Add a subtle box shadow */
+}
+
+.paper-card .card-title {
+  color: var(--accent-color-4);
+  /* Title color */
+}
+
+.paper-card .card-text {
+  color: #333333;
+  /* Text color */
+}
+
+.paper-card .text-muted {
+  color: #666666;
+  /* Muted text color */
+}
