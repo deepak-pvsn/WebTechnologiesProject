@@ -478,13 +478,13 @@ conditions.`
     },
     {
       id: 17,
-      title: 'Summary of DNS Over HTTPS Abuse',
-      authors: ' K. Hynek, V. Bartoš, M. Uřičář, J. Andraščík, M. Celeda, P. Čeleda, J. Vykopal,M. Zadnik',
+      title: 'Analyzing the costs (and benefits) of DNS, DoT, and DoH for the modern web',
+      authors: 'Austin Hounsel, Kevin Borgolte, Paul Schmitt, Jordan Holland, and Nick Feamster',
       problemDefinition: ['DoH_MD'],
       solutions: ['ML_BD'],
       methodology: ['Th_Analysis'],
       url:'https://ieeexplore.ieee.org/abstract/document/9775718',
-      problemContent: `The paper addresses the misuse of the DNS over HTTPS (DoH) protocol, which, although
+      problemContent: `The paper addresses the costs of DNS, DoT and DoH which, although
 designed to enhance user privacy by encrypting DNS queries, has become a tool for
 malicious activities. Traditional DNS transmits queries in plain text, making them
 susceptible to surveillance and profiling. DoH encrypts these queries within HTTPS traffic,
@@ -926,7 +926,7 @@ Deep Learning: Explore CNN layer/filter variations and LSTM configurations`
     
     {
       id: 46,
-      title: 'NVESTIGATION OF OBLIVIOUS DNS OVER HTTPS AGAINST TRAFFIC ANALYSIS ATTACKS',
+      title: 'Investigation of Oblivious DNS over HTTPS against traffic analysis attacks',
       authors: 'Mohammad Amir Salari, B.Sc.',
       problemDefinition: ['ML_AI'],
       solutions: ['Theoretical'],
