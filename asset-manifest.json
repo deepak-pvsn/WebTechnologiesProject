@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/WebTechnologiesProject/static/css/main.64e004dd.css",
+    "main.js": "/WebTechnologiesProject/static/js/main.4d3b79f7.js",
+    "static/js/453.8ab44547.chunk.js": "/WebTechnologiesProject/static/js/453.8ab44547.chunk.js",
+    "index.html": "/WebTechnologiesProject/index.html",
+    "main.64e004dd.css.map": "/WebTechnologiesProject/static/css/main.64e004dd.css.map",
+    "main.4d3b79f7.js.map": "/WebTechnologiesProject/static/js/main.4d3b79f7.js.map",
+    "453.8ab44547.chunk.js.map": "/WebTechnologiesProject/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64e004dd.css",
+    "static/js/main.4d3b79f7.js"
+  ]
+}
