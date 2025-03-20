@@ -1,17 +1,17 @@
 // Main.js
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import AboutUs from './components/AboutUs';
 
 const Main = () => {
     return (
-        <HashRouter>
+        <BrowserRouter basename="/WebTechnologiesProject">
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/about-us" element={<AboutUs />} />
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     );
 };
 
